@@ -21,6 +21,16 @@ public class HelloController {
         return "hello teacher ~~";
     }
 
+    @GetMapping("/myStuListPost")
+    public Object myStuListPost() {
+
+        String url = "http://service-student";
+
+        List list = restTemplate.getForObject(url + "/service-student/student/getStuListByTeacherId?teacherId=10011", ArrayList.class);
+        //注意这里加了 context-path 所以路径路由多了一个service-student
+
+        return list;
+    }
 
 
     @GetMapping("/myStuList")

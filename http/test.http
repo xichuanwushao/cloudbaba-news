@@ -1,0 +1,15 @@
+GET http://localhost:8080/hello
+
+### 测试通过
+POST http://localhost:8700/service-teacher/teacher/myStuListPost
+Content-Type: application/x-www-form-urlencoded
+utoken:abc123
+uid:1001
+
+###
+GET http://localhost:8700/service-teacher/teacher/myStuList?utoken=abc123&uid=1001
+
+###
+
+
+

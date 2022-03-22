@@ -10,7 +10,6 @@ public class GatewayApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
-        System.out.println("http://localhost:8001/service-gateway/gateway/hello");
     }
 
 }
