@@ -13,3 +13,6 @@ server:
 spring:
   application:
     name: service-teacher
+  cloud:
+    zookeeper:
+      connect-string: 192.168.170.133:2181
