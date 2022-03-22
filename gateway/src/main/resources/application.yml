@@ -17,8 +17,12 @@ spring:
     zookeeper:
       connect-string: 192.168.170.133:2181
     gateway:
+      discovery:
+        locator:
+#          enabled: true       # 开启动态路由，从注册中心根据微服务名称获得目标节点
       routes:
         - id: service-teacher-Route    # 路由id，可以自定义，保证全局唯一
-          uri: http://192.168.1.82:8001    # 后端微服务节点的路由uri地址
+          uri: lb://service-teacher        # lb 代表负载均衡，会动态寻址
+#          uri: http://192.168.1.82:8001    # 后端微服务节点的路由uri地址
           predicates:         # 匹配断言，符合条件的则放行（可以精确到具体的接口名）
             - Path=/service-teacher/teacher/**
