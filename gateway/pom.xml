@@ -9,13 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xichuan.tea1</groupId>
-    <artifactId>teacher-api</artifactId>
+    <groupId>com.xichuan.gy</groupId>
+    <artifactId>gateway</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <okhttp.version>4.2.2</okhttp.version>
     </properties>
     <dependencies>
         <dependency>
@@ -45,5 +44,4 @@
             <artifactId>okhttp</artifactId>
         </dependency>
     </dependencies>
-
 </project>

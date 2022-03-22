@@ -6,6 +6,7 @@
     <modules>
         <module>student-api</module>
         <module>teacher-api</module>
+        <module>gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -20,6 +21,7 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
+        <okhttp.version>4.2.2</okhttp.version>
     </properties>
     <dependencies>
         <!-- SpringCloud 依赖 -->
@@ -39,7 +41,11 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
-
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
