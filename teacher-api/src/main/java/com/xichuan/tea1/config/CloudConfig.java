@@ -1,5 +1,7 @@
 package com.xichuan.tea1.config;
 
+import com.alibaba.cloud.nacos.ribbon.NacosRule;
+import com.netflix.loadbalancer.IRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +24,9 @@ public class CloudConfig {
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
     }
 
-
+    @Bean
+    public IRule ribbonRule() {
+        return new NacosRule();
+    }
 
 }
