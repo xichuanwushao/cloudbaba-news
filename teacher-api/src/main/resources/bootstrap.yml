@@ -5,5 +5,6 @@ spring:
         server-addr: 192.168.170.133:8848   # nacos 配置中心所在地址
         file-extension: yaml              # 指定动态配置的文件类型（扩展名）
         prefix: service-teacher
-
+        namespace: 3e496ec4-8a61-4aa4-bb4e-7e43f9f7d602
+        group: common                # 指定不同的分组Group
 #dataId: service-teacher-dev.yaml
