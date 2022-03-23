@@ -33,7 +33,7 @@ public class HelloController {
         stuList.add("SpiderMan");
         stuList.add("IronMan");
 
-        System.out.println(port);
+        System.out.println("测试轮询"+port);
 
         return stuList;
     }

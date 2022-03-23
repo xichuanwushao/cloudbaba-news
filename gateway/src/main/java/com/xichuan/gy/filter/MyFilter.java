@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 /***
  * 只对post请求有用
  */
-@Component
+//@Component
 public class MyFilter implements GlobalFilter, Ordered {
 
     @Override
