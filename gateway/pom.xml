@@ -30,10 +30,17 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!-- 引入zookeeper作为注册中心 -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>-->
+<!--            <version>2.2.5.RELEASE</version>-->
+<!--        </dependency>-->
+
+        <!-- 引入nacos作为注册中心 -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
-            <version>2.2.5.RELEASE</version>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
@@ -45,5 +52,6 @@
             <artifactId>spring-cloud-starter-gateway</artifactId>
             <version>2.2.9.RELEASE</version>
         </dependency>
+
     </dependencies>
 </project>

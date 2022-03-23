@@ -23,7 +23,7 @@ public class HelloController {
     @GetMapping("/getStuListByTeacherId")
     public Object getStuListByTeacherId(String teacherId) {
 
-        // 假设此处经过数据库查询，节约时间，本课程升级内容对于数据库调用忽略
+        // 假设此处经过数据库查询，节约时间
 
         List stuList = new ArrayList();
         stuList.add("Jack");

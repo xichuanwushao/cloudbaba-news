@@ -10,8 +10,11 @@ spring:
   application:
     name: service-gateway
   cloud:
-    zookeeper:
-      connect-string: 192.168.170.133:2181
+#    zookeeper:
+#      connect-string: 192.168.170.133:2181
+    nacos:
+      discovery:
+        server-addr: 192.168.170.133:8848   # nacos 所在地址
     gateway:
       discovery:
         locator:
@@ -22,3 +25,9 @@ spring:
 #          uri: http://192.168.1.82:8001    # 后端微服务节点的路由uri地址
           predicates:         # 匹配断言，符合条件的则放行（可以精确到具体的接口名）
             - Path=/service-teacher/teacher/**
+# 打开监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
